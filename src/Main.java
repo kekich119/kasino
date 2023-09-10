@@ -6,27 +6,29 @@ public class Main {
 
        ;
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите, от которого числа будет рклетка");
-         int min = in.nextInt();
-        System.out.println("Введите число, до которого будет рулетка");
-        int max = in.nextInt();
+        System.out.println("Введите число, которое победит от 1 до 10");
+        int min = in.nextInt();
 
-
-
-        yes();
-
-    }
-
-
-    public static int getRan(int max,  int min){
-
-
-         return (int) (Math.random() * max) +min;
+        if (min > 10){
+            System.out.println("Миша, всё фигня, давай по новому");
+        }
+        else {
+            yes(1);
+        }
 
     }
-    public static void yes() {
+
+
+    public static int getRan(){
+
+
+         return (int) (Math.random() * 10) +1 ;
+
+    }
+    public static void yes(int min) {
         int x = getRan();
-        if (x==4){
+        System.out.println("Число которое выпало: "+x);
+        if (min == x){
             System.out.println("ВЫ ВЫИГРАЛИ");
         }
         else {
@@ -39,7 +41,7 @@ public class Main {
 
 
 
-            System.out.println(x);
+
 
 
 
