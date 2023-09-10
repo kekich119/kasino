@@ -3,27 +3,38 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Кинуть мидас");
-        String yes = in.nextLine();
+        yes();
 
-        if (yes.equals("да")){
-            yes();
+    }
+
+
+    public static int getRan(){
+
+
+         return (int) (Math.random() * 4) + 1;
+
+    }
+    public static void yes() {
+        int x = getRan();
+        if (x==4){
+            System.out.println("ВЫ ВЫИГРАЛИ");
+        }
+        else {
+            System.out.println("Вы проиграли");
         }
 
 
 
 
-    }
-    public static void yes(){
 
 
-        for  (int i = 1; i < 10; i++){
-            System.out.println((int) (Math.random() * 4)+1 );
-        }
+
+            System.out.println(x);
 
 
 
     }
+
+
 
 }
