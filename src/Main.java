@@ -3,8 +3,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+       ;
         Scanner in = new Scanner(System.in);
-        System.out.println("");
+        System.out.println("Введите, от которого числа будет рклетка");
+         int min = in.nextInt();
+        System.out.println("Введите число, до которого будет рулетка");
+        int max = in.nextInt();
 
 
 
@@ -13,10 +18,10 @@ public class Main {
     }
 
 
-    public static int getRan(){
+    public static int getRan(int max,  int min){
 
 
-         return (int) (Math.random() * 4) + 1;
+         return (int) (Math.random() * max) +min;
 
     }
     public static void yes() {
@@ -39,6 +44,7 @@ public class Main {
 
 
     }
+
 
 
 
